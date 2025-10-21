@@ -883,7 +883,7 @@ z-index: -3;
     }
 }
 
- /* ---HOW WE WORK SECTION 2--- */
+ /* ---HOW WE WORK SECTION 3--- */
  .how-we-work-3{
     display: grid;
     grid-template-columns: 1;
@@ -936,7 +936,7 @@ z-index: -3;
     }
 }
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 .content-details-title{
 
     font-size: 28px;
@@ -948,4 +948,325 @@ z-index: -3;
 
 }
 
-        
+
+ /* Review Title Section */
+.review{
+    margin-top: 5rem;
+    color: var(--clr-secondary);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+ .review-desc{
+    text-align: center;
+    width: 100%;
+ }
+
+.review-main-title {
+    text-align: center;
+    margin-top: 4re;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--clr-secondary);
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.review-title span {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.review-title-sub {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--clr-secondary);
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.curved-text-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.curved-text {
+    position: relative;
+    z-index: 1;
+}
+
+.underline-image {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+.curved-text:has-text("short") .review-curve-line {
+    width: 105%;
+}
+
+.curved-text:has-text("longer text here") .review-curve-line {
+    width: 115%;
+}
+/* Image styles within title */
+.review-title img:not(.review-curve-line) {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+}
+
+.review-title img:not(.review-curve-line):hover {
+    transform: scale(1.1);
+}
+
+/* Curve line styles */
+.modify {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.review-curve-line {
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+    height: auto;
+    z-index: -1;
+    max-width: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Large Desktop */
+@media (max-width: 1440px) {
+    .review-title {
+        font-size: 48px;
+    }
+    
+    .review-title img:not(.review-curve-line) {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .review-curve-line {
+        width: 108%;
+        bottom: -7px;
+    }
+    .review-title-sub{
+        font-size: 48px;
+    }
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+    .review-title {
+        font-size: 42px;
+    }
+    
+    .review-title img:not(.review-curve-line) {
+        width: 50px;
+        height: 50px;
+        margin: 0 6px;
+    }
+    
+    .review-curve-line {
+        width: 105%;
+        bottom: -6px;
+    }
+    .review-title-sub {
+        font-size: 36px;
+        gap: 6px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .review-main-title {
+        margin-bottom: 3rem;
+    }
+    
+    .review-title {
+        font-size: 36px;
+        gap: 6px;
+    }
+    
+    .review-title img:not(.review-curve-line) {
+        width: 45px;
+        height: 45px;
+        margin: 0 4px;
+    }
+    
+    .review-curve-line {
+        width: 102%;
+        bottom: -5px;
+    }
+    .review-title-sub {
+        font-size: 32px; /* Reduced from 36px */
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 600px) {
+    .review-main-title {
+        margin-bottom: 2.5rem;
+    }
+    
+    .review-title {
+        font-size: 32px;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .review-title img:not(.review-curve-line) {
+        width: 40px;
+        height: 40px;
+        margin: 0 4px;
+    }
+    
+    .review-curve-line {
+        width: 100%;
+        bottom: -4px;
+    }
+    
+    /* Keep images inline on mobile but stack the title lines */
+    .review-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .review-title span {
+        display: inline-flex;
+        align-items: center;
+    }
+    .review-title-sub {
+        font-size: 28px; 
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+    .review-main-title {
+        margin-bottom: 2rem;
+    }
+    
+    .review-title {
+        font-size: 28px;
+        gap: 10px;
+    }
+    
+    .review-title img:not(.review-curve-line) {
+        width: 35px;
+        height: 35px;
+        margin: 0 3px;
+    }
+    
+    .review-curve-line {
+        bottom: -3px;
+    }
+    .review-title-sub {
+        font-size: 24px;
+        gap: 10px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+    .review-title {
+        font-size: 24px;
+    }
+    
+    .review-title img:not(.review-curve-line) {
+        width: 30px;
+        height: 30px;
+        margin: 0 2px;
+    }
+    
+    .review-curve-line {
+        bottom: -2px;
+    }
+    .review-title-sub {
+        font-size: 20px; /* Reduced from 24px */
+        gap: 8px;
+    }
+    
+}
+
+/* High-resolution displays */
+@media (min-width: 1920px) {
+    .review-title {
+        font-size: 64px;
+    }
+    
+    .review-title img:not(.review-curve-line) {
+        width: 70px;
+        height: 70px;
+        margin: 0 12px;
+    }
+    
+    .review-curve-line {
+        width: 112%;
+        bottom: -10px;
+    }
+}
+
+/* ---CHARITY--- */
+.charity-img{
+    max-width: 100%;
+}
+@media (max-width : 768px){
+    .charity-img-container{
+        flex-direction: column;
+    }
+    .charity-img{
+        max-width: 90%;
+    }
+}
+@media (max-width : 600px){
+    .charity-img-container{
+        flex-direction: column;
+    }
+    .charity-img{
+        max-width: 95%;
+    }
+}
+@media (max-width : 480px){
+    .charity-img-container{
+        flex-direction: column;
+    }
+    .charity-img{
+        max-width: 100%;
+    }
+}
+
+    
