@@ -12,6 +12,7 @@ html {
     --clr-primary: hsl(309, 100%, 69%);
     --clr-secondary: hsl(150, 30%, 17%);
     --clr-white: hsl(38, 36%, 96%);
+    --clr-accent : hsl(310, 100%, 84%);
     --rounded: 50px;
 }
         
@@ -185,9 +186,11 @@ nav {
 /* ---HERO--- */
 .input-container{
     background-color: white;
-    width: max-content;
-    padding: 0.3rem 15px;
+    width: 500px;
+    padding: 0.3rem 20px;
     border-radius: 5rem;
+    display: flex;
+    justify-content: space-between;
 }
 .input-btn{
     padding: 0.5rem 1rem;
@@ -281,6 +284,79 @@ z-index: -3;
     height: 26px;
     top: 70px;
     right: 0px;
+}
+
+
+/* ---CONTACT--- */
+.contact{
+    margin-top: 20rem;
+    min-height: 100vh;
+}
+.contact-title{
+    font-size: 56px;
+    text-align: center;
+    font-weight: 700;
+}
+.contact-underline{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+.contact-partners{
+    background-color: #ffffff;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 1000px;
+    height: 340px;
+    position: relative;
+    margin-top: 64px;
+}
+.contact-content{
+    width: 500px;
+    height: 201px;
+    margin-left: 40px;
+}
+.contact-content-title{
+    font-weight: 600;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.contact-content-desc{
+    font-weight: 400;
+    font-size: 18px; 
+}
+.contact-partners-social{
+    /* transform: translateX(600px); */
+    position: absolute;
+    right: -400px;
+}
+.contact-twitter{
+    border-radius: 16px;
+    background-color: var(--clr-primary);
+    padding: 24px;
+    display: grid;
+    gap: 12px;
+    width: 404px;
+    height: 200px;
+}
+.contact-pinterest{
+    border-radius: 16px;
+    background-color: var(--clr-accent);
+    padding: 24px;
+    display: grid;
+    gap: 12px;
+    width: 404px;
+    height: 200px;
+}
+.contact-curve-line{
+    position: absolute;
+    top: 40px;
+    left: -60px;
+    z-index: -2;
+
 }
 
 /* Mobile menu button animation */
