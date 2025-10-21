@@ -883,5 +883,69 @@ z-index: -3;
     }
 }
 
+ /* ---HOW WE WORK SECTION 2--- */
+ .how-we-work-3{
+    display: grid;
+    grid-template-columns: 1;
+    margin-top: 10rem;
+    gap: 2rem;
+ }
+ .how-we-work-3-content-1, .how-we-work-3-content-2,.how-we-work-3-content-3{
+    display: flex;
+    justify-content: space-between;
+ }
+ .content-details-title{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+ }
+.content-details-desc{
+    width: 400px;
+    font-size: 20px;
+    line-height: 32px;
+}
+.content-image{
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* RESPONSIVE DSIGN */
+/* Tablet */
+@media (max-width: 768px) {
+    .how-we-work-3-content-1, .how-we-work-3-content-2,.how-we-work-3-content-3{
+        display: flex;
+        flex-direction: column;
+    }
+    .content-details-title{
+
+    font-size: 32px;
+
+ }
+    .content-details-desc{
+    width: 100%;
+        font-size: 16px;
+
+    }
+    .content-image{
+        max-width: 80%;
+    }
+    .order-image{
+        order : 2
+    }
+}
+/* MOBILE */
+@media (max-width: 768px) {
+.content-details-title{
+
+    font-size: 28px;
+
+ }
+    .content-image{
+        max-width: 100%;
+    }
+
+}
 
         
