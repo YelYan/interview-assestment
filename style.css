@@ -800,6 +800,22 @@ z-index: -3;
         font-size: 17px;
         line-height: 1.6;
     }
+    .how-we-work-left-hand, .how-we-work-right-hand{
+    width: 200px;
+    z-index: -2;
+    }
+    .left-like, .right-like{
+        width: 50px;
+        z-index: -2;
+    }
+    .left-like{
+        bottom: 250px;
+        left: 70px;
+    }
+    .right-like{
+        right: 100px;
+        top: 250px;
+    }
 }
 
 /* Mobile Large */
@@ -831,8 +847,24 @@ z-index: -3;
         line-height: 1.6;
     }
     
-    br {
+    br, .how-we-work-left-curve-line,.how-we-work-right-curve-line {
         display: none;
+    }
+    .how-we-work-left-hand, .how-we-work-right-hand{
+        width: 200px;
+        z-index: -2;
+    }
+    .left-like, .right-like{
+        width: 50px;
+        z-index: -2;
+    }
+    .left-like{
+        bottom: 200px;
+        left: 70px;
+    }
+    .right-like{
+        right: 100px;
+        top: 250px;
     }
 }
 
@@ -860,6 +892,12 @@ z-index: -3;
     
     .work-desc {
         font-size: 15px;
+    }
+    .left-like{
+        display: none;
+    }
+    .right-like{
+       display: none;
     }
 }
 
@@ -1027,6 +1065,28 @@ z-index: -3;
 .curved-text:has-text("longer text here") .review-curve-line {
     width: 115%;
 }
+.client-review {
+    flex-wrap: nowrap; 
+    gap: 0; 
+    margin-top: 2rem;
+}
+.image-wrapper {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-wrapper:first-child,
+.image-wrapper:nth-child(2) {
+    width: auto;
+}
+.image-wrapper:first-child img,
+.image-wrapper:nth-child(2) img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Image styles within title */
 .review-title img:not(.review-curve-line) {
     display: inline-block;
@@ -1130,6 +1190,9 @@ z-index: -3;
         justify-content: center;
         text-align: center;
     }
+    .client-review{
+        flex-direction: column;
+    }
 }
 
 /* Mobile Large */
@@ -1171,6 +1234,14 @@ z-index: -3;
         flex-direction: column;
         gap: 12px;
         text-align: center;
+    }
+    .review-tiny-title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .review-tiny-container{
+        flex-direction: column;
+        gap: 1rem;
     }
 }
 
